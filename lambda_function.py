@@ -45,7 +45,7 @@ def build_response(session_attributes, speechlet_response):
 def supervisor():
     session_attributes = {}
     card_title = "Welcome"
-    connection = pymysql.connect(host="mydb.ctlobngm7jqx.us-west-2.rds.amazonaws.com", user="root", passwd="rootroot", database="mydb")
+    connection = pymysql.connect(host=<rds-db-url>, user=<rds-username>, passwd=<rds-db-password>, database="mydb")
     cursor = connection.cursor()
     now = datetime.datetime.now()
     today= now.strftime("%Y-%m-%d")
@@ -63,7 +63,7 @@ def supervisor():
 def seniorsupervisor():
     session_attributes = {}
     card_title = "Welcome"
-    connection = pymysql.connect(host="mydb.ctlobngm7jqx.us-west-2.rds.amazonaws.com", user="root", passwd="rootroot", database="mydb")
+    connection = pymysql.connect(host=<rds-db-url>, user=<rds-username>, passwd=<rds-db-password>, database="mydb")
     cursor = connection.cursor()
     now = datetime.datetime.now()
     today= now.strftime("%Y-%m-%d")
